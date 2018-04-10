@@ -12,6 +12,8 @@ I wrote this primarily for [pips - Python package browser](https://github.com/pt
 # Usage
 
 ```PowerShell
+Import-Module .\bktree
+
 $bktree = [BKTree]::new()
 
 # Building a BK-tree
