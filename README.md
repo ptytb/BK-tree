@@ -1,11 +1,11 @@
 # BK-tree
 
-This is a very fast string fuzzy-matching module in written in PowerShell.
+This is a very fast string fuzzy-matching module written in PowerShell.
 
 It uses *Damerau-Levenshtein* distance as metric function
 and *BK-tree* structure to represent a search tree.
 
-*BK-tree* can be flattened into arrays for even faster search.
+*BK-tree* can be flattened into arrays and loaded later for even faster search.
 
 I wrote this primarily for [pips - Python package browser](https://github.com/ptytb/pips)
 
@@ -32,7 +32,7 @@ $candidates = $bktree.Search('cold', 2)
 # We've built a dictionary, let's save it
 $bktree.SaveArrays('dict.bin')
 
-# Load a dictionary
+# Load a dictionary. This is supposed to be used in your app along with SearchFast()
 $bktree.LoadArrays('dict.bin')
 
 $candidates = $bktree.SearchFast('cold', 2)
